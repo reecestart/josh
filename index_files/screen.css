@@ -84,7 +84,9 @@ hr.divider { width: 2px; height: 100%; background: #fed864; color: #fed864; bord
 .wrapper {
 	width: 100%;
 	background: #fff url(../images/bg-hero.jpg) no-repeat top center; 
-	height: 900px;
+	min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 	overflow: hidden;
 	padding-bottom: 50px;
 	z-index: 6;
@@ -116,7 +118,7 @@ h2.titles { font-size: 6em; line-height: 1em; text-transform: uppercase; font-st
 a.btn_play { width: 100px; height: 100px; display: block; position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px; z-index: 99; }
 a.btn_play:hover { opacity:.7; filter:alpha(opacity=70); }
 .video-wrap:hover a.video-image { opacity:.5; filter:alpha(opacity=50); }
-.guy { position: absolute; bottom: -100px; right: -350px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+.guy { position: absolute; bottom: -100px; right: -360px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
@@ -390,28 +392,30 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Desktops and laptops ----------- */
 
 
-@media only screen 
-and (max-width : 1500px) {
 
-	.divider-dots.first { height: 740px; }
+
+@media only screen 
+and (max-width : 500px) {
+
+	.divider-dots.first { height: 240px; }
 
 }
 
 @media only screen 
-and (max-width : 1400px) {
+and (max-width : 400px) {
 
 	.header h1 { margin-bottom: 15% !important;}
-	.divider-dots.first { height: 740px; }
+	.divider-dots.first { height: 240px; }
 
 }
 
 @media only screen 
-and (max-width : 1300px) {
+and (max-width : 300px) {
 
 	.prices li { font-size: 2em; margin-bottom: 4px; }
 	.prices li:last-child { margin-bottom: 0;}
 
-	.price-wrap .divider-dots { width: 22%; right: 320px; top: 120px;  }
+	.price-wrap .divider-dots { width: 22%; right: 120px; top: 20px;  }
 	.price-wrap a.button { margin-top: 93px;}
 
 	.schedule h2 { font-size: 2.2em; margin-top: 6px;}
@@ -424,15 +428,15 @@ and (max-width : 1300px) {
 }
 
 @media only screen 
-and (max-width : 1200px) {
+and (max-width : 200px) {
 
 	p {font-size:1.6em; line-height:1.8em;}
 	.details-content p { line-height: 1.8em; }
 	
-	.wrapper { height: 2760px;}
+	.wrapper { height: 760px;}
 
 	h2.titles { font-size: 4.4em;}
-	.border { height: 84px; width: 400px; }
+	.border { height: 84px; width: 40px; }
 	.details-content .border { width: 190px; left: 110px; right: inherit; }
 
 	.about p { width: 50%; color: #fff; font-size: 2em;}
@@ -453,13 +457,13 @@ and (max-width : 1200px) {
 }
 
 @media only screen 
-and (max-width : 1100px) {
+and (max-width : 100px) {
 
 	p {font-size:1.6em; line-height:1.8em;}
 	.sponsor-wrap p { line-height: 1.8em; }
 	.details-content p { line-height: 1.8em; }
 	
-	.wrapper { height: 2760px;}
+	.wrapper { height: 760px;}
 
 	h2.titles { font-size: 4.4em;}
 	.border { height: 84px; width: 400px; }
@@ -493,7 +497,7 @@ and (max-width : 1100px) {
 
 
 @media only screen 
-and (max-width : 960px) {
+and (max-width : 260px) {
 
 	.wrapper {
 		background: #fff url(../images/bg-hero.jpg) no-repeat top center; 
@@ -503,7 +507,7 @@ and (max-width : 960px) {
 		background-size: cover;
 		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
 		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
-		height: 1500px;
+		height: 500px;
 		overflow: visible;
 	}
 	.header h1 { margin-bottom: 10% !important;}
@@ -519,7 +523,7 @@ and (max-width : 960px) {
 	.sponsor-wrap h2 { font-size: 12vw; }
 
 	
-	.content { padding-top: 420px; }
+	.content { padding-top: 120px; }
 	
 	.divider-dots.first { height: 400px; top: -460px; }
 
@@ -570,7 +574,7 @@ and (max-width : 960px) {
 }
 
 @media only screen 
-and (max-width : 880px) {
+and (max-width : 280px) {
 
 	p.copyright { font-size: 1.4em; }
 	h2.titles { font-size: 3.2em;}
@@ -591,142 +595,6 @@ and (max-width : 880px) {
 	
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-
-	input { -webkit-appearance: none;}
-
-}
-
-@media only screen 
-and (max-width : 480px) {
-
-	.col_2, .columns { margin-top: 40px;}
-	.col_2 .left, .col_2 .right,
-	.col_2 .left, .col_2 .right { width: 100%; float: none; display: block; }
-	.col_2 .right { margin-top: 40px;}
-	.columns .panel,
-	.columns.panels_3 .panel,
-	.columns.panels_4 .panel,
-	.columns.panels_5 .panel { width: 100%; float: none; display: block; margin-bottom: 30px;}	
-
-	
-	.section { padding: 40px 0; }
-	
-	h2.titles { font-size: 2.4em; }
-
-	.hero_wrap { height: auto; padding: 40px 0; }
-	.hero h2 { margin-top: 0; font-size: 3em;}
-	.hero a.button { max-width: 100%; }
-
-	.social { float: none; display: block; margin: 0 auto; overflow: hidden;}
-	.footer { padding: 30px 0; }
-	p.copyright { margin: 30px 0 0 0; text-align: center;}
-
-	.wrapper { height: 1100px; margin-bottom: 40px;}
-
-	.header { overflow: hidden;}
-	.header h1 { width: 60px; margin: 20px 0 !important;}
-	.header h2.lake { font-size: 29vw; margin-left: 20px; }
-	.header h2.lake span { font-size: 16vw; }
-	
-	.date-tag { margin-left: 20px; margin-top: 20px; }
-	.date-tag h3 { font-size: 1.8em;  letter-spacing: 3px; }
-	.date-tag h4 { font-size: 6vw; }
-	
-	.content { padding-top: 100px; }
-	
-	.divider-dots.first { height: 100px; top:-290px; left: 60px;}
-	.divider-dots.first .dot { background: #fff; color: #fff;}
-	.divider-dots.first hr.divider { background: #fff; color: #fff;}
-	
-	h2.titles { font-size: 3em; }
-	
-	.about h2 { color: #fff;}
-	.about p { width: 100%; color: #fff;}
-
-	p {font-size:1.4em; line-height:1.6em;}
-	.sponsor-wrap p { line-height: 1.6em; font-size:1.4em; }
-	.details-content p { line-height: 1.6em; font-size:1.4em; }
-	
-	.video-wrap { max-width: 60%; margin-left: 0; }
-	.guy { bottom: 65%; right:-20px; z-index: 4; width: 58%; }
-	
-	.about h3 { font-size: 13vw; left: 50%; bottom: 55px; z-index: 2; font-weight: 800;}
-
-
-	.testimony-1 { width: 100%; max-width: 75%; position: relative; top: 0; left: 0; z-index: 2; margin-top: 40px; margin-left: 20px; }
-	.testimony-1 p { font-size: 3.4em; }
-	.avatar-name h2 { font-size: 1.8em; }
-	.avatar-name small { font-size: 1.1em; }
-
-	.included-content { width: 100%; }
-
-	.border { width: 260px; }
-	
-	.included-row .right { width: 100%; }
-	.included-row .left { width: 100%; text-align: right; margin-bottom: 10px; }
-	.included-row h3 { font-size: 5em;}
-	
-	.lodging-wrap .section .left, .lodging-wrap .section .right { width: 100%;}
-	.lodging-wrap .section .left h2 { width: 100%;}
-	.lodging-wrap .section .left p { width: 100%;}
-	.lodging-wrap .section .right { margin-top: 0%;}
-	.images-three { width: 100%;}
-	.left .images-three { margin-left: 0%;}
-	.right .images-three { display: none;}
-	.images-three a { display: block; width: 33.3333333333%; float: left;}
-	.images-three a.hidden { display: none;}
-	
-	.divider-dots.second { height: 170px; top: -3%; left:50px;}
-	
-	a.mobile {display: block; width: 70%; position: absolute; top: -6%; right: -7%; z-index: 99;}
-
-	.marg-t-220, a.marg-t-220 { margin-top: 90px !important;}
-	.marg-b-220, a.marg-b-220 { margin-bottom: 40px !important;}
-
-	.testimony-2 { width: 85%;  margin-top: 50px; margin-right: 40px; }
-	.testimony-2 p { font-size: 3.2em; }
-
-	.details-wrap { margin-top: 10px;}
-	
-	.details-content { margin-bottom: 0 !important;}
-	.details-content .title-wrap, .details-content p.left { width: 100%; }
-	.details-content .schedule, .details-content p.right { width: 100%; }
-	.details-content .schedule { clear: both; margin-top: 80px;}
-	.details-content p.right { margin-top: 40px; }
-	.details-content .title-wrap h2 { text-align: left;} 
-	
-	.details-content.faq p { margin-bottom: 0;}
-	.schedule h2 { font-size: 1.8em; font-weight: 700; }
-
-	.price-wrap { margin-top: 40px;}
-	.price-wrap a.button { margin-top: 40px; max-width: 100%;}
-	
-	.prices .left { width: 35%; padding: 20px 20px 20px 0 !important; }
-	.prices .right { width: 65%; padding: 20px !important;}
-	.prices p { font-size: .7em; line-height: 1em; bottom: 20px; text-align: left;}
-	.prices h2 { font-size: 4em; font-weight: 300;}
-	.prices li { font-size: 1.4em; text-transform: uppercase; color: #111; list-style: disc; margin-left: 24px;}
-
-	.marg-t-180, a.marg-t-180 { margin-top: 40px !important;}
-	.marg-b-180, a.marg-b-180 { margin-top: 40px !important;}
-	.pad-t-180 { padding-top: 40px !important;}
-	.pad-tb-180 { padding: 40px 0 !important;}
-
-	.sponsor-wrap .left { width: 100%;}
-	.sponsor-wrap .right { width: 80%; margin-top: 0; margin-right: 10%;}
-	.sponsor-wrap .panel { margin-right: 0; width: 100%; margin-bottom: 40px;}
-	.sponsor-wrap .full .panel { width: 100%;}
-	.sponsor-wrap a.button {padding-left: 0; padding-right: 0; width: 100%; max-width: 300px; text-align: center; }
-
-  .email { margin-top: 15vh;}
-	.email h2 { font-size: 2.6em; }
-
-}
-
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
@@ -742,6 +610,9 @@ and (max-device-width : 480px) {
 	.columns.panels_4 .panel,
 	.columns.panels_5 .panel { width: 100%; float: none; display: block; margin-bottom: 30px;}	
 
+	.content { padding-top: 100px; position: relative; z-index: 2;}
+
+
 	.header_wrap { padding: 40px 0;}
 	.content_wrap { padding: 40px 0;}
 	.footer_wrap { padding: 40px 0;}
@@ -754,4 +625,148 @@ and (max-device-width : 480px) {
 	.hero h2 { margin-top: 0; font-size: 3em;}
 	.hero a.button { max-width: 100%; }
 
+}
+
+/* iPhone 12/13 Pro Max (landscape) ----------- */
+@media only screen 
+and (max-width : 926px)
+and (orientation:landscape) {
+	.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; right: -120px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPhone 12/13 Pro Max (portrait) ----------- */
+@media only screen 
+and (max-width : 428px)
+and (orientation:portrait) {
+	.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 35%; top: 100px; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; top: 60px; right: -120px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPad (landscape) ----------- */
+@media only screen 
+and (max-width : 1080px)
+and (orientation:landscape) {
+	.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 23%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; right: -180px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPad (portrait) ----------- */
+@media only screen 
+and (max-width : 810px)
+and (orientation:portrait) {
+	.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 23%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; right: -130px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Pixel 5 Linux (portrait) ----------- */
+@media only screen 
+and (max-width : 393px)
+and (orientation:portrait) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: 115%; left: 22%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; right: -70px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Pixel 5 Linux (landscape) ----------- */
+@media only screen 
+and (max-width : 851px)
+and (orientation:landscape) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 18%; bottom: 100px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 90px; right: -120px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPhone 12/13 Pro Max iOS 14.6 (portrait) ----------- */
+@media only screen 
+and (max-width : 428px)
+and (orientation:portrait) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: 115%; left: 22%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; top: 70%; right: -74px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPhone 12/13 Pro Max iOS 14.6 (landscape) ----------- */
+@media only screen 
+and (max-width : 926px)
+and (orientation:landscape) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 100px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 90px; right: -137px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Galaxy S20 Linux (portrait) ----------- */
+@media only screen 
+and (max-width : 360px)
+and (orientation:portrait) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: 108%; left: 18%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 60px; top: 70%; right: -16%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Galaxy S10/S10+ Linux (landscape) ----------- */
+@media only screen 
+and (max-width : 760px)
+and (orientation:landscape) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 175px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 170px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Kindle Fire HDX Linux (landscape) ----------- */
+@media only screen 
+and (max-width : 1280px)
+and (orientation:landscape) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: -33px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: -42px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* iPhone 12/13+ Pro iOS 14.6 (landscape) ----------- */
+@media only screen 
+and (max-width : 844px)
+and (orientation:landscape) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 148px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 141px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
 }
