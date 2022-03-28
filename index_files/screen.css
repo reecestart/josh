@@ -86,7 +86,6 @@ hr.divider { width: 2px; height: 100%; background: #fed864; color: #fed864; bord
 	background: #fff url(../images/bg-hero.jpg) no-repeat top center; 
 	min-height: 100vh;
   /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
 	overflow: hidden;
 	padding-bottom: 50px;
 	z-index: 6;
@@ -412,3 +411,35 @@ a.mobile {display: none;}
 		transform: rotate(270deg);}
 }
 
+@media (min-width:280px) and
+(max-width:280px) and
+(orientation: portrait) { /* Galaxy fold dual-screen mode */ 
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -37.8vh; left: 15.9vw; z-index: 4; font-weight: 800;}
+	.guy { position: absolute; top: -42vh; right: -15vw; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+@media (min-width:640px) and
+(max-width:640px) and
+(orientation: landscape) { /* Galaxy S5 landscape */ 
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -109.8vh; left: 16.9vw; z-index: 4; font-weight: 800;}
+	.guy { position: absolute; top: -124vh; right: -15vw; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+@media (min-width:1366px) and
+(max-width:1366px) and
+(orientation: landscape) { /* iPad Pro landscape */ 
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -27.8vh; left: 16.9vw; z-index: 4; font-weight: 800;}
+	.guy { position: absolute; top: -38vh; right: -15vw; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
