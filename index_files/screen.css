@@ -354,8 +354,8 @@ a.mobile {display: none;}
 /* Media Queries
 --------------------------------------------------------------------------------------- */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
-	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -8.1em; left: 0.9em; z-index: 4; font-weight: 800;}
-	.guy { position: absolute; top: -47em; right: -4.5em; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -46.1vh; left: 13vw; z-index: 4; font-weight: 800;}
+	.guy { position: absolute; top: -50vh; right: -14vw; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
 		-moz-transform: rotate(270deg);
 		-o-transform: rotate(270deg);
 		-ms-transform: rotate(270deg);
@@ -404,8 +404,8 @@ a.mobile {display: none;}
 
 
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
-	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; bottom: 182px; right: -57px; z-index: 4; font-weight: 800;}
-	.guy { position: absolute; top: -431px; right: -124px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -0.8em; left: 0.9em; z-index: 4; font-weight: 800;}
+	.guy { position: absolute; top: -36em; right: -38em; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
 		-moz-transform: rotate(270deg);
 		-o-transform: rotate(270deg);
 		-ms-transform: rotate(270deg);
