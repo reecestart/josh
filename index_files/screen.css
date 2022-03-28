@@ -118,13 +118,13 @@ h2.titles { font-size: 6em; line-height: 1em; text-transform: uppercase; font-st
 a.btn_play { width: 100px; height: 100px; display: block; position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px; z-index: 99; }
 a.btn_play:hover { opacity:.7; filter:alpha(opacity=70); }
 .video-wrap:hover a.video-image { opacity:.5; filter:alpha(opacity=50); }
-.guy { position: absolute; bottom: -100px; right: -360px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+.guy { position: absolute; bottom: -100px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -o-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);}
 
-.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 22%; bottom: -130px; z-index: 2; font-weight: 800;}
+.about h3 { font-size: 16vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 22%; bottom: -85px; z-index: 2; font-weight: 800;}
 
 .included { 
 	width: 100%;
@@ -765,6 +765,19 @@ and (max-width : 844px)
 and (orientation:landscape) {
 	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 148px; z-index: 2; font-weight: 800;}
 	.guy { position: absolute; bottom: 141px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
+
+/* Pixel 6 (portrait) ----------- */
+@media only screen 
+and (max-width : 1080px)
+and (orientation:portrait)
+and (-webkit-min-device-pixel-ratio: 4) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; left: 19%; bottom: 45px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; bottom: 43px; right: -17%; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
 		-moz-transform: rotate(270deg);
 		-o-transform: rotate(270deg);
 		-ms-transform: rotate(270deg);
