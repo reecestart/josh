@@ -783,3 +783,15 @@ and (-webkit-min-device-pixel-ratio: 4) {
 		-ms-transform: rotate(270deg);
 		transform: rotate(270deg);}
 }
+
+/* Chrome Mobile Dev Tools (portrait) ----------- */
+@media only screen 
+and (max-width : 400px)
+and (orientation:portrait) {
+	.about h3 { font-size: 17vw; text-transform: uppercase; color: #fed864; line-height: .75em; position: absolute; top: -41%; left: 23%; bottom: 70px; z-index: 2; font-weight: 800;}
+	.guy { position: absolute; top: -85%; right: -74px; z-index: 4; width: 58%;  -webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);}
+}
